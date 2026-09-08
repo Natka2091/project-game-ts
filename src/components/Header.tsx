@@ -21,14 +21,14 @@ export function Header() {
             Квести
           </Link>
           <Link 
-            to="/game" 
-            className={`transition-colors ${location.pathname === '/game' ? 'text-[#FF7A00]' : 'text-zinc-300 hover:text-[#FF7A00]'}`}
+            to="/beginners" 
+            className={`transition-colors ${location.pathname === '/beginners' ? 'text-[#FF7A00]' : 'text-zinc-300 hover:text-[#FF7A00]'}`}
           >
             Новачкам
           </Link>
           <Link 
-            to="/rules" 
-            className={`transition-colors ${location.pathname === '/rules' ? 'text-[#FF7A00]' : 'text-zinc-300 hover:text-[#FF7A00]'}`}
+            to="/reviews" 
+            className={`transition-colors ${location.pathname === '/reviews' ? 'text-[#FF7A00]' : 'text-zinc-300 hover:text-[#FF7A00]'}`}
           >
             Відгуки
           </Link>
