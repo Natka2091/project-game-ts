@@ -6,7 +6,7 @@ import { MainMenu } from './components/MainMenu';
 function App() {
   return (
     <BrowserRouter>
-    <div className="flex flex-col min-h-screen bg-[#121212] text-white">
+    <div className="min-h-screen bg-[#121212] text-white overflow-hidden">
       <Header />
       <Routes>
         <Route path="/" element={<MainMenu />} />

@@ -1,7 +1,7 @@
-import skype from '../assets/icons/skype.svg';
+import { FaInstagram, FaFacebookF } from 'react-icons/fa';
+
 export function Footer() {
   return (
-    <footer>
-    </footer>
+    
   );
 }
