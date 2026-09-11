@@ -15,6 +15,16 @@ import metro2033 from '../assets/images/metro-2033.png';
 import oldattic from '../assets/images/old-attic.png';
 import oldestatesecrets from '../assets/images/old-estate-secrets.png';
 
+import crypt_big from '../assets/images/crypt-big.jpg';
+import maniac_big from '../assets/images/maniac-big.jpg';
+import ritual_big from '../assets/images/ritual-big.jpg';
+import fatalexperiment_big from '../assets/images/fatal-experiment-big.jpg';
+import hutintheforest_big from '../assets/images/hut-in-the-forest-big.jpg';
+import mars2056_big from '../assets/images/mars-2056-big.jpg';
+import metro2033_big from '../assets/images/metro-2033-big.jpg';
+import oldattic_big from '../assets/images/old-attic-big.jpg';
+import oldestatesecrets_big from '../assets/images/old-estate-secrets-big.jpg';
+
 export const categories = [
     {
         name: 'All Quests',
@@ -42,6 +52,7 @@ export const quests = [
         id: 1,
         title: 'Crypt',
         image: crypt,
+        imageBig: crypt_big,
         players: '2-5 pl',
         difficulty: 'Difficult',
         category: 'Horrors',
@@ -53,6 +64,7 @@ export const quests = [
         id: 2,
         title: 'Maniac',
         image: maniac,
+        imageBig: maniac_big,
         players: '3-6 pl',
         difficulty: 'Medium',
         category: 'Horrors',
@@ -65,6 +77,7 @@ export const quests = [
         id: 3,
         title: 'Ritual',
         image: ritual,
+        imageBig: ritual_big,
         players: '3-5 pl',
         difficulty: 'Difficult',
         category: 'Mysticism',
@@ -77,6 +90,7 @@ export const quests = [
         id: 4,
         title: 'Mars-2056',
         image: mars2056,
+        imageBig: mars2056_big,
         players: '2-4 pl',
         difficulty: 'Easy',
         category: 'Sci-fi',
@@ -89,6 +103,7 @@ export const quests = [
         id: 5,
         title: 'The Secrets of the Old Mansion',
         image: oldestatesecrets,
+        imageBig: oldestatesecrets_big,
         players: '2-5 pl',
         difficulty: 'Easy',
         category: 'Detective',
@@ -101,6 +116,7 @@ export const quests = [
         id: 6,
         title: 'The Cabin in the Woods',
         image: hutintheforest,
+        imageBig: hutintheforest_big,
         players: '4-7 pl',
         difficulty: 'Medium',
         category: 'Horrors',
@@ -113,6 +129,7 @@ export const quests = [
         id: 7,
         title: 'Fatal Experiment',
         image: fatalexperiment,
+        imageBig: fatalexperiment_big,
         players: '5-8 pl',
         difficulty: 'Difficult',
         category: 'Sci-fi',
@@ -125,6 +142,7 @@ export const quests = [
         id: 8,
         title: 'Metro 2033',
         image: metro2033,
+        imageBig: metro2033_big,
         players: '6-8 pl',
         difficulty: 'Medium',
         category: 'Sci-fi',
@@ -137,6 +155,7 @@ export const quests = [
         id: 9,
         title: 'The Old Attic',
         image: oldattic,
+        imageBig: oldattic_big,
         players: '2-3 pl',
         difficulty: 'Easy',
         category: 'Mysticism',
