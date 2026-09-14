@@ -1,19 +1,24 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { MainMenu } from './components/MainMenu';
+import { QuestPage } from './components/QuestPage';
 
-function App() {
+export function App() {
   return (
-    <BrowserRouter>
-    <div className="min-h-screen bg-[#121212] text-white overflow-hidden">
+    <div className="min-h-screen bg-[#121212]">
+
       <Header />
+
       <Routes>
         <Route path="/" element={<MainMenu />} />
+        <Route path="/quests/:id" element={<QuestPage />} />
       </Routes>
+
       <Footer />
+
     </div>
-    </BrowserRouter>
   );
 }
 

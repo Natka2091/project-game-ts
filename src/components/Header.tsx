@@ -11,8 +11,8 @@ export function Header() {
     }`;
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <header className="fixed inset-x-0 top-0 z-50">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
         <Link
           to="/"
@@ -21,24 +21,23 @@ export function Header() {
           <img
             src={mainlogo}
             alt="Escape Room"
-            className="w-33.5 h-12.5 object-contain"
+            className="h-[50px] w-[134px] object-contain"
           />
         </Link>
 
-        <nav className="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest">
+        <nav className="hidden items-center space-x-8 text-xs font-bold uppercase tracking-widest md:flex">
           {headerMenu.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
-              end={item.path === '/'}
               className={navClass}
-              >
+            >
               {item.name}
             </NavLink>
           ))}
         </nav>
 
-        <div className="text-sm font-semibold tracking-wide text-zinc-300 hover:text-white transition-colors">
+        <div className="text-sm font-semibold tracking-wide text-zinc-300 transition-colors hover:text-white">
           <a href={headerContacts.phoneLink}>
             {headerContacts.phone}
           </a>

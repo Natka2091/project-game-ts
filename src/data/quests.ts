@@ -25,6 +25,22 @@ import metro2033_big from '../assets/images/metro-2033-big.jpg';
 import oldattic_big from '../assets/images/old-attic-big.jpg';
 import oldestatesecrets_big from '../assets/images/old-estate-secrets-big.jpg';
 
+export type Quest = {
+  id: number;
+  title: string;
+  image: string;
+  imageBig: string;
+  players: string;
+  difficulty: string;
+  category: string;
+  duration: string;
+  description: string;
+};
+
+export type QuestCardProps = {
+  quest: Quest;
+};
+
 export const categories = [
     {
         name: 'All Quests',
@@ -42,12 +58,12 @@ export const categories = [
     {   name: 'Detective',
         icon: detective,    
     },
-    {   name: 'Sci-Fi',
+    {   name: 'Sci-fi',
         icon: scifi,    
     },
 ];
 
-export const quests = [
+export const quests: Quest[] = [
     {
         id: 1,
         title: 'Crypt',
@@ -164,3 +180,4 @@ export const quests = [
             'You discover an old attic filled with forgotten objects, mysterious photographs, and locked boxes. Every item seems to be connected to a story from the past. Somewhere among the dust and shadows is the key to the final mystery. Search carefully, solve the puzzles, and discover what has been hidden in the attic for so many years.',
     },
 ]
+
