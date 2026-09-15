@@ -22,7 +22,7 @@ const blackMarker = L.icon({
   popupAnchor: [0, -62],
 });
 
-export function ContactMap() {
+export function Map() {
   return (
     <MapContainer
       center={location}
