@@ -1,6 +1,6 @@
 import mainlogo from '../assets/icons/main-logo.svg';
 import { Link, NavLink, type NavLinkRenderProps } from 'react-router-dom';
-import { headerMenu, headerContacts } from '../data/navigation';
+import { headerMenu, headerContact } from '../data/navigation';
 
 export function Header() {
   const navClass = ({ isActive }: NavLinkRenderProps) =>
@@ -38,8 +38,8 @@ export function Header() {
         </nav>
 
         <div className="text-sm font-semibold tracking-wide text-zinc-300 transition-colors hover:text-white">
-          <a href={headerContacts.phoneLink}>
-            {headerContacts.phone}
+          <a href={headerContact.phoneLink}>
+            {headerContact.phone}
           </a>
         </div>
 

@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { MainMenu } from './components/MainMenu';
 import { QuestPage } from './components/QuestPage';
+import { ContactsPage } from './components/contactsPage';
 
 export function App() {
   return (
@@ -14,6 +15,7 @@ export function App() {
       <Routes>
         <Route path="/" element={<MainMenu />} />
         <Route path="/quests/:id" element={<QuestPage />} />
+         <Route path="/contacts" element={<ContactsPage />} />
       </Routes>
 
       <Footer />

@@ -21,7 +21,7 @@ export const headerMenu = [
     },
 ];
 
-export const headerContacts = {
+export const headerContact = {
   phone: '+44 20 7946 0123',
   phoneLink: 'tel:+442079460123',
 };
