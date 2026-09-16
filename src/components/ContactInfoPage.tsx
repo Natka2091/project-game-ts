@@ -2,10 +2,8 @@ import { Map } from './Map';
 
 export function ContactsPage() {
   return (
-    <div className="fixed inset-0 z-40 text-white">
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
-
-      <div className="relative mx-auto max-w-6xl px-6 pt-28 pb-10">
+    <main className="min-h-screen bg-[#121212] text-white">
+      <div className="mx-auto max-w-6xl px-6 pt-36 pb-20">
         <section>
           <p className="mb-3 text-sm text-[#FF7A00]">
             Quests in London
@@ -15,11 +13,11 @@ export function ContactsPage() {
             Contacts
           </h1>
 
-          <div className="mt-6 border-t border-zinc-700 pt-6">
-            <div className="grid grid-cols-2 gap-6">
-              
+          <div className="mt-8 border-t border-zinc-700 pt-10">
+            <div className="grid grid-cols-2 gap-12">
+
               <div>
-                <div className="mb-6">
+                <div className="mb-8">
                   <h2 className="mb-2 text-sm font-semibold">
                     Address
                   </h2>
@@ -31,7 +29,7 @@ export function ContactsPage() {
                   </p>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-8">
                   <h2 className="mb-2 text-sm font-semibold">
                     Opening hours
                   </h2>
@@ -41,7 +39,7 @@ export function ContactsPage() {
                   </p>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-8">
                   <h2 className="mb-2 text-sm font-semibold">
                     Phone
                   </h2>
@@ -68,15 +66,14 @@ export function ContactsPage() {
                 </div>
               </div>
 
-              <div className="h-[260px] w-full overflow-hidden md:h-[315px]">
+              <div className="h-[315px] w-full overflow-hidden">
                 <Map />
               </div>
 
             </div>
           </div>
         </section>
-
       </div>
-    </div>
+    </main>
   );
 }

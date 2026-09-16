@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 import { quests } from '../data/quests';
 
 export function QuestPage() {
@@ -7,6 +7,8 @@ export function QuestPage() {
   const quest = quests.find(
     (quest) => quest.id === Number(id)
   );
+
+  const location = useLocation();
 
   if (!quest) {
     return (
@@ -57,12 +59,13 @@ export function QuestPage() {
               {quest.description}
             </p>
 
-            <button
-              type="button"
-              className="mt-8 rounded-full bg-[#FF7A00] px-8 py-3 text-sm font-bold uppercase transition-colors hover:bg-orange-500"
+            <Link
+              to="/booking"
+              state={{ backgroundLocation: location }}
+              className="relative top-4 inline-block rounded-full bg-[#FF7A00] px-8 py-3 text-sm font-bold uppercase transition-colors hover:bg-orange-500"
             >
               Book a quest
-            </button>
+            </Link>
 
           </div>
         </div>

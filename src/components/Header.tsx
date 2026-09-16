@@ -1,11 +1,8 @@
 import mainlogo from '../assets/icons/main-logo.svg';
-import { Link, NavLink, useLocation, type NavLinkRenderProps } from 'react-router-dom';
+import { Link, NavLink, type NavLinkRenderProps } from 'react-router-dom';
 import { headerMenu, headerContact } from '../data/navigation';
 
 export function Header() {
-
-  const location = useLocation();
-
   const navClass = ({ isActive }: NavLinkRenderProps) =>
     `transition-colors ${
       isActive
@@ -29,33 +26,15 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center space-x-8 text-xs font-bold uppercase tracking-widest md:flex">
-          {headerMenu.map((item) => {
-            if (item.name === 'Contacts') {
-              return (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  className={navClass}
-                  state={{
-                    backgroundLocation: location,
-                  }}
-                >
-                  {item.name}
-                </NavLink>
-              );
-            } 
-            
-              return (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  className={navClass}
-                >
-                  {item.name}
-                </NavLink>
-              );
-
-    })}
+          {headerMenu.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={navClass}
+            >
+              {item.name}
+            </NavLink>
+          ))}
         </nav>
 
         <div className="text-sm font-semibold tracking-wide text-zinc-300 transition-colors hover:text-white">
