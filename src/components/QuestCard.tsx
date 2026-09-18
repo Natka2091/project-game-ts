@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import type { QuestCardProps} from '../data/quests';
+import type { QuestCardProps} from './data';
 
 export function QuestCard({ quest }: QuestCardProps) {
   return (
     <Link
-      to={`/quests/${quest.id}`}
+      to={`/quests/${quest.slug}`}
       className="group relative block aspect-[1.65] overflow-hidden"
     >
       <img

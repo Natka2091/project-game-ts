@@ -1,5 +1,5 @@
 import { useSearchParams } from 'react-router-dom';
-import { categories, quests } from '../data/quests';
+import { categories, quests } from './data';
 import { QuestCard } from './QuestCard';
 
 export function MainMenu() {

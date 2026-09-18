@@ -20,13 +20,13 @@ export function App() {
 
       <Routes location={backgroundLocation || location}>
         <Route path="/" element={<MainMenu />} />
-        <Route path="/quests/:id" element={<QuestPage />} />
+        <Route path="/quests/:slug" element={<QuestPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
       </Routes>
 
       {backgroundLocation && (
         <Routes>
-          <Route path="/booking" element={<BookingForm />} />
+          <Route path="/booking/:slug" element={<BookingForm />} />
         </Routes>
       )}
 

@@ -27,6 +27,7 @@ import oldestatesecrets_big from '../assets/images/old-estate-secrets-big.jpg';
 
 export type Quest = {
   id: number;
+  slug: string;
   title: string;
   image: string;
   imageBig: string;
@@ -40,6 +41,55 @@ export type Quest = {
 export type QuestCardProps = {
   quest: Quest;
 };
+
+export type BookingFormData = {
+  name: string;
+  phone: string;
+  participants: number;
+  agreement: boolean;
+};
+
+export type HeaderMenuItem = {
+  name: string;
+  path: string;
+};
+
+export type HeaderContact = {
+  phone: {
+    number: string;
+    link: string;
+  };
+};
+
+export const headerContact: HeaderContact = {
+  phone:{
+    number: '+44 20 7946 0123',
+    link: 'tel:+442079460123',
+  }
+};
+
+export const headerMenu: HeaderMenuItem[] = [
+    {
+        name: 'Quests',
+        path: '/',
+    },
+    {
+        name: 'For Beginners',
+        path: '/beginners',
+    },
+    {
+        name: 'Reviews',
+        path: '/reviews',
+    },
+    {
+        name: 'Promotions',
+        path: '/promotions',
+    },
+    {
+        name: 'Contacts',
+        path: '/contacts',
+    },
+];
 
 export const categories = [
     {
@@ -67,6 +117,7 @@ export const quests: Quest[] = [
     {
         id: 1,
         title: 'Crypt',
+        slug: 'crypt',
         image: crypt,
         imageBig: crypt_big,
         players: '2-5 pl',
@@ -79,6 +130,7 @@ export const quests: Quest[] = [
     {
         id: 2,
         title: 'Maniac',
+        slug: 'maniac', 
         image: maniac,
         imageBig: maniac_big,
         players: '3-6 pl',
@@ -92,6 +144,7 @@ export const quests: Quest[] = [
     {
         id: 3,
         title: 'Ritual',
+        slug: 'ritual',
         image: ritual,
         imageBig: ritual_big,
         players: '3-5 pl',
@@ -105,6 +158,7 @@ export const quests: Quest[] = [
     {
         id: 4,
         title: 'Mars-2056',
+        slug: 'mars-2056',
         image: mars2056,
         imageBig: mars2056_big,
         players: '2-4 pl',
@@ -118,6 +172,7 @@ export const quests: Quest[] = [
     {
         id: 5,
         title: 'The Secrets of the Old Mansion',
+        slug: 'the-secrets-of-the-old-mansion',
         image: oldestatesecrets,
         imageBig: oldestatesecrets_big,
         players: '2-5 pl',
@@ -131,6 +186,7 @@ export const quests: Quest[] = [
     {
         id: 6,
         title: 'The Cabin in the Woods',
+        slug: 'the-cabin-in-the-woods',
         image: hutintheforest,
         imageBig: hutintheforest_big,
         players: '4-7 pl',
@@ -144,6 +200,7 @@ export const quests: Quest[] = [
     {
         id: 7,
         title: 'Fatal Experiment',
+        slug: 'fatal-experiment',
         image: fatalexperiment,
         imageBig: fatalexperiment_big,
         players: '5-8 pl',
@@ -156,6 +213,7 @@ export const quests: Quest[] = [
 
     {
         id: 8,
+        slug: 'metro-2033',
         title: 'Metro 2033',
         image: metro2033,
         imageBig: metro2033_big,
@@ -169,6 +227,7 @@ export const quests: Quest[] = [
 
     {
         id: 9,
+        slug: 'the-old-attic',
         title: 'The Old Attic',
         image: oldattic,
         imageBig: oldattic_big,
@@ -180,4 +239,3 @@ export const quests: Quest[] = [
             'You discover an old attic filled with forgotten objects, mysterious photographs, and locked boxes. Every item seems to be connected to a story from the past. Somewhere among the dust and shadows is the key to the final mystery. Search carefully, solve the puzzles, and discover what has been hidden in the attic for so many years.',
     },
 ]
-

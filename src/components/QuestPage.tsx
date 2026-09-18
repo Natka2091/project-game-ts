@@ -1,11 +1,11 @@
 import { Link, useParams, useLocation } from 'react-router-dom';
-import { quests } from '../data/quests';
+import { quests } from './data';
 
 export function QuestPage() {
-  const { id } = useParams();
+  const { slug } = useParams<{ slug: string }>();
 
   const quest = quests.find(
-    (quest) => quest.id === Number(id)
+    (quest) => quest.slug === slug
   );
 
   const location = useLocation();
@@ -60,7 +60,7 @@ export function QuestPage() {
             </p>
 
             <Link
-              to="/booking"
+              to={`/booking/${quest.slug}`}
               state={{ backgroundLocation: location }}
               className="relative top-4 inline-block rounded-full bg-[#FF7A00] px-8 py-3 text-sm font-bold uppercase transition-colors hover:bg-orange-500"
             >
