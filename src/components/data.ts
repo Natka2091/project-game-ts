@@ -25,6 +25,9 @@ import metro2033_big from '../assets/images/metro-2033-big.jpg';
 import oldattic_big from '../assets/images/old-attic-big.jpg';
 import oldestatesecrets_big from '../assets/images/old-estate-secrets-big.jpg';
 
+import type { IconType } from 'react-icons';
+import { FaInstagram, FaFacebookF } from 'react-icons/fa';
+
 export type Quest = {
   id: number;
   slug: string;
@@ -60,6 +63,25 @@ export type HeaderContact = {
     link: string;
   };
 };
+
+export type SocialLinks = {
+  name: string;
+  href: string;
+  icon: IconType;
+};
+
+export const socialLinks: SocialLinks[] = [
+    {
+        name: 'Instagram',
+        href: 'https://instagram.com/your_account',
+        icon: FaInstagram
+    },
+    {
+        name: 'Facebook',
+        href: 'https://facebook.com/your_page',
+        icon: FaFacebookF
+    }
+]
 
 export const headerContact: HeaderContact = {
   phone:{

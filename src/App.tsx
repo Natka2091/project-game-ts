@@ -6,6 +6,7 @@ import { MainMenu } from './components/MainMenu';
 import { QuestPage } from './components/QuestPage';
 import { ContactsPage } from './components/ContactInfoPage';
 import { BookingForm } from './components/BookingForm';
+import { NotFoundPage } from './components/NotFoundPage';
 
 export function App() {
 
@@ -22,6 +23,7 @@ export function App() {
         <Route path="/" element={<MainMenu />} />
         <Route path="/quests/:slug" element={<QuestPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
 
       {backgroundLocation && (

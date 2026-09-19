@@ -58,11 +58,9 @@ const onSubmit: SubmitHandler<BookingFormData> = (data) => {
                     className="w-full bg-transparent border border-white rounded-md px-4 py-3  focus:outline-none focus:border-gray-500 transition-colors"
                 />
 
-                {errors.name && (
                     <p className="mt-1 text-xs text-red-500">
-                        {errors.name.message}
+                        {errors.name?.message}
                     </p>
-                )}
             </div>
 
             <div>
@@ -75,11 +73,9 @@ const onSubmit: SubmitHandler<BookingFormData> = (data) => {
                     })}
                     className="w-full bg-transparent border border-white rounded-md px-4 py-3 focus:outline-none focus:border-gray-500 transition-colors"
                 />
-                {errors.phone && (
-                    <p className="mt-1 text-xs text-red-500">
-                        {errors.phone.message}
-                    </p>
-                )}
+               <p className="mt-1 text-xs text-red-500">
+                {errors.phone?.message}
+                </p>
             </div>
             <div>
                 <label className="block text-sm mb-2 font-light">Number of participants</label>
@@ -97,11 +93,11 @@ const onSubmit: SubmitHandler<BookingFormData> = (data) => {
                     })}
                     className="w-full bg-transparent border border-white rounded-md px-4 py-3 focus:outline-none focus:border-gray-500 transition-colors"
                 />
-                {errors.participants && (
+                
                     <p className="mt-1 text-xs text-red-500">
-                        {errors.participants.message}
+                        {errors.participants?.message}
                     </p>
-                )}
+                
             </div>
 
             <button
@@ -126,11 +122,10 @@ const onSubmit: SubmitHandler<BookingFormData> = (data) => {
                 <a href="#" className="underline hover:text-white transition-colors">the rules for processing personal data</a> {' '} and the user agreement 
                 </label>
 
-                {errors.agreement && (
                     <p className="mt-1 text-xs text-red-500">
-                        {errors.agreement.message}  
+                        {errors.agreement?.message}  
                     </p>
-                )}
+
             </div>
         </form>
       </div>
