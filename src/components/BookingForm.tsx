@@ -68,14 +68,20 @@ const onSubmit: SubmitHandler<BookingFormData> = (data) => {
                 <input
                     type="tel"
                     placeholder="Phone"
-                    {...register("phone", { 
-                        required: 'Phone is required' 
+                    {...register("phone", {
+                    required: "Phone is required",
+                    pattern: {
+                        value: /^(?:\+44|0)(?:[\s-]?\d){9,10}$/,
+                        message: "Please enter a valid UK phone number",
+                    },
                     })}
                     className="w-full bg-transparent border border-white rounded-md px-4 py-3 focus:outline-none focus:border-gray-500 transition-colors"
                 />
+
                <p className="mt-1 text-xs text-red-500">
                 {errors.phone?.message}
                 </p>
+                
             </div>
             <div>
                 <label className="block text-sm mb-2 font-light">Number of participants</label>
