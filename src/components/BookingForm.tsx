@@ -1,7 +1,9 @@
 import  close from '../assets/icons/close.svg';
 import {useNavigate, useParams} from 'react-router-dom';
 import {useForm, type SubmitHandler} from 'react-hook-form';
-import type { BookingFormData } from './data';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { bookingSchema, type BookingFormData } from './bookingSchema';
+
 
 export function BookingForm() {
   const navigate = useNavigate();
@@ -11,7 +13,9 @@ export function BookingForm() {
     register, 
     handleSubmit, 
     formState: { errors } 
-} = useForm<BookingFormData>();
+} = useForm<BookingFormData>({
+    resolver: zodResolver(bookingSchema)
+});
 
 const onSubmit: SubmitHandler<BookingFormData> = (data) => {
 
@@ -52,9 +56,7 @@ const onSubmit: SubmitHandler<BookingFormData> = (data) => {
                 <input
                     type="text"
                     placeholder="Name"
-                    {...register("name", { 
-                        required: 'Name is required' 
-                    })}
+                    {...register("name")}
                     className="w-full bg-transparent border border-white rounded-md px-4 py-3  focus:outline-none focus:border-gray-500 transition-colors"
                 />
 
@@ -68,34 +70,22 @@ const onSubmit: SubmitHandler<BookingFormData> = (data) => {
                 <input
                     type="tel"
                     placeholder="Phone"
-                    {...register("phone", {
-                    required: "Phone is required",
-                    pattern: {
-                        value: /^(?:\+44|0)(?:[\s-]?\d){9,10}$/,
-                        message: "Please enter a valid UK phone number",
-                    },
-                    })}
+                    {...register("phone")}
                     className="w-full bg-transparent border border-white rounded-md px-4 py-3 focus:outline-none focus:border-gray-500 transition-colors"
                 />
 
                <p className="mt-1 text-xs text-red-500">
                 {errors.phone?.message}
                 </p>
-                
+
             </div>
             <div>
                 <label className="block text-sm mb-2 font-light">Number of participants</label>
                 <input
                     type="number"
-                    min="1"
                     placeholder="Number of participants"
-                    {...register("participants", { 
-                        required: 'Number of participants is required',
+                    {...register("participants", {
                         valueAsNumber: true,
-                        min: {
-                            value: 1,
-                            message: 'Number of participants must be at least 1'
-                        }
                     })}
                     className="w-full bg-transparent border border-white rounded-md px-4 py-3 focus:outline-none focus:border-gray-500 transition-colors"
                 />
@@ -115,9 +105,7 @@ const onSubmit: SubmitHandler<BookingFormData> = (data) => {
                 <input 
                     type="checkbox" 
                     id="agreement" 
-                    {...register("agreement", { 
-                        required: 'You must agree to the terms'
-                    })}
+                    {...register("agreement")}
                     className="mt-1"
                 />
                 <label 

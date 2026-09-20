@@ -45,13 +45,6 @@ export type QuestCardProps = {
   quest: Quest;
 };
 
-export type BookingFormData = {
-  name: string;
-  phone: string;
-  participants: number;
-  agreement: boolean;
-};
-
 export type HeaderMenuItem = {
   name: string;
   path: string;
